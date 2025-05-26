@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4v*+*23qu_8mgmc54%_!j0-$0r%p&7irio!a@2u9pca18!e7zc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 CORS_ALLOWED_ORIGINS = [
@@ -33,6 +33,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CORS_ALLOW_CREDENTIALS = True
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Quyidagi qatorni qo'shing
 # Application definition
 
 INSTALLED_APPS = [
