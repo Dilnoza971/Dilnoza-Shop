@@ -1,0 +1,24 @@
+name: Deploy to EC2 Production
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Ishni bajaradigan virtual mashina
+    steps:
+      - name: Checkout code # Repozitoriy kodini GitHub Actionsga tortish
+        uses: actions/checkout@v2
+
+      - name: Set up SSH agent # Serverga ulanish uchun SSH agentni sozlash
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }} # GitHub Secret'dan private kalitni olish
+
+      - name: Deploy project to EC2 
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} '
+            /bin/bash /home/ubuntu/Dilnoza-Shop/deploy.sh
+          '
