@@ -41,7 +41,7 @@ export default function LoginPage() {
     try {
    
       const response = await axios.post(
-        'http://127.0.0.1:8000/api/users/login', 
+        'http://13.51.86.26/api/users/login', 
         {
           email, 
           password, 
