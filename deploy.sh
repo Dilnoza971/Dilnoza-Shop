@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Log fayliga chiqish
+
 LOG_FILE="/var/log/deploy.log"
 exec > >(tee -a ${LOG_FILE}) 2>&1
 echo "--------------------------------------------------------"
