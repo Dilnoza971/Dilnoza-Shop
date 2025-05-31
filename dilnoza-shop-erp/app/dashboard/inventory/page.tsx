@@ -60,7 +60,7 @@ export default function InventoryPage() {
       const token = localStorage.getItem('accessToken');
       if (!token) throw new Error("Avtorizatsiya tokeni topilmadi.");
       
-      const response = await axios.get("http://127.0.0.1:8000/api/products/", {
+      const response = await axios.get("http://13.51.86.26/api/products/", {
         headers: { "Content-Type": "application/json" }
       });
       setProducts(response.data);
@@ -98,7 +98,7 @@ export default function InventoryPage() {
     e.preventDefault();
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.post("http://127.0.0.1:8000/api/products/", formData, {
+      const response = await axios.post("http://13.51.86.26/api/products/", formData, {
         headers: { "Content-Type": "application/json" }
       });
       // Ro'yxatni serverdan kelgan yangi mahsulot bilan yangilaymiz
@@ -117,7 +117,7 @@ export default function InventoryPage() {
 
     try {
         const token = localStorage.getItem('accessToken');
-        await axios.delete(`http://127.0.0.1:8000/api/products/${id}/`, {
+        await axios.delete(`http://13.51.86.26/api/products/${id}/`, {
             headers: { "Content-Type": "application/json" }
         });
        
