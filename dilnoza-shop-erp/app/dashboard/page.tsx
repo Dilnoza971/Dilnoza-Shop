@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState , useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { DashboardHeader } from "@/components/dashboard-header"
@@ -12,6 +12,14 @@ import { ArrowDown, ArrowUp, Package, RefreshCw, ShoppingCart, Users } from "luc
 export default function DashboardPage() {
   const [timeframe, setTimeframe] = useState<"daily" | "weekly" | "monthly" | "yearly">("monthly")
 
+  useEffect(() => {
+  const token = localStorage.getItem('accessToken');
+  if (!token) {
+    router.push('/');
+    return null; 
+  } 
+  }, []);
+  
   return (
     <>
       <DashboardShell>
