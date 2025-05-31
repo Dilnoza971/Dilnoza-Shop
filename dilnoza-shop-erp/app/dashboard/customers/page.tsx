@@ -72,7 +72,7 @@ export default function CustomersPage() {
       try {
         // ✅ XATO TO'G'IRLANDI: Endi getAuthHeaders() funksiyasi ishlatilmoqda
         const headers = getAuthHeaders();
-        const response = await axios.get("http://127.0.0.1:8000/api/customers/", { headers });
+        const response = await axios.get("http://13.51.86.26/api/customers/", { headers });
         setCustomers(response.data);
       } catch (err: any) {
         if (!err.message.includes("token")) {
@@ -109,7 +109,7 @@ export default function CustomersPage() {
     e.preventDefault();
     try {
       const headers = getAuthHeaders();
-      const response = await axios.post("http://127.0.0.1:8000/api/customers/", formData, { headers });
+      const response = await axios.post("http://13.51.86.26/api/customers/", formData, { headers });
       
       setCustomers(prev => [...prev, response.data]);
       setIsDialogOpen(false); 
@@ -126,7 +126,7 @@ export default function CustomersPage() {
 
     try {
         const headers = getAuthHeaders();
-        await axios.delete(`http://127.0.0.1:8000/api/customers/${id}/`, { headers });
+        await axios.delete(`http://13.51.86.26/api/customers/${id}/`, { headers });
         setCustomers(customers.filter(c => c.id !== id));
     } catch (err) {
         console.error("O'chirishda xatolik:", err);
