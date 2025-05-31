@@ -78,9 +78,9 @@ export default function OrdersPage() {
         const headers = getHeaders();
         // Bir vaqtda bir nechta so'rov jo'natish
         const [ordersRes, productsRes, customersRes] = await Promise.all([
-          axios.get("http://127.0.0.1:8000/api/orders/", { headers }),
-          axios.get("http://127.0.0.1:8000/api/products/", { headers }),
-          axios.get("http://127.0.0.1:8000/api/customers/", { headers }),
+          axios.get("http://13.51.86.26/api/orders/", { headers }),
+          axios.get("http://13.51.86.26/api/products/", { headers }),
+          axios.get("http://13.51.86.26/api/customers/", { headers }),
         ]);
 
         setOrders(ordersRes.data);
