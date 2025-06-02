@@ -13,7 +13,7 @@ export function MainNav() {
     <div className="mr-4 flex">
       <Link href="/dashboard" className="mr-6 flex items-center space-x-2">
         <ShoppingBag className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block">Dilnoza Shop</span>
+        <span className="hidden font-bold sm:inline-block">DILNOZA shop</span>
       </Link>
       <nav className="flex items-center space-x-6 text-sm font-medium">
         <Link
