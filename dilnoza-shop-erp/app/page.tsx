@@ -78,7 +78,7 @@ export default function LoginPage() {
             Dilnoza Shop
           </CardTitle>
           <CardDescription>
-            Tizimga kirish uchun ma'lumotlaringizni kiriting
+            Kirish uchun ma'lumotlaringizni kiriting
           </CardDescription>
         </CardHeader>
         <CardContent>
