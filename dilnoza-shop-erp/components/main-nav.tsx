@@ -23,7 +23,7 @@ export function MainNav() {
             pathname === "/dashboard" ? "text-primary" : "text-muted-foreground",
           )}
         >
-          Dashboard
+          DASHBORD
         </Link>
         <Link
           href="/dashboard/inventory"
