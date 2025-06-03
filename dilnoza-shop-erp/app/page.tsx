@@ -75,7 +75,7 @@ export default function LoginPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1 text-center">
           <CardTitle className="text-3xl font-bold tracking-tight">
-            DILNOZA SHOP
+            CRM SHOP
           </CardTitle>
           <CardDescription>
             Kirish uchun ma'lumotlaringizni kiriting
